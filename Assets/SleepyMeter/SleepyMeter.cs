@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SleepyMeter : MonoBehaviour
 {
@@ -8,9 +10,14 @@ public class SleepyMeter : MonoBehaviour
 
     [SerializeField]
     private SleepyMeterBarUI sleepybar;
+    public GameObject GameOverUISP;
+    public GameObject GameOverUIHA;
+
 
     void Start()
     {
+        GameOverUISP.SetActive(false);
+        GameOverUIHA.SetActive(false);
         coffeeDrink = 20;
         sleepybar.setMaxSleepy(MaxSleep);
 
@@ -31,6 +38,15 @@ public class SleepyMeter : MonoBehaviour
             
         }
 
+        if (sleepy <= 0f) 
+        {
+            GameOverScreenSP();
+        }
+
+        if (sleepy >= 120f)
+        {
+            GameOverScreenHA();
+        }
 
     }
 
@@ -42,9 +58,20 @@ public class SleepyMeter : MonoBehaviour
 
     private void tiredTime()
     {
-        sleepy -= 5 * Time.deltaTime;
+        if (sleepy < 120 && sleepy > 0f)
+        {
+            sleepy -= 5 * Time.deltaTime;
+        }
     }
 
+    private void GameOverScreenSP() 
+    {
+        GameOverUISP.SetActive(true);
+    }
 
+    private void GameOverScreenHA()
+    {
+        GameOverUIHA.SetActive(true);
+    }
 
 }
