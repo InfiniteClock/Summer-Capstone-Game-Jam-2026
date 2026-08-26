@@ -151,3 +151,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735f24f2567779d42a9df77ae0c85d85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <SortColor>k__BackingField: 2
+  isSorted: 0
