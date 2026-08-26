@@ -15,11 +15,38 @@ MonoBehaviour:
   Path: SummerCapstoneJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639233590733708898
+  lastModified: 639233597536227773
   FileSizes:
   - Name: Desktop
-    Value: 724
+    Value: 772
   Exists: 1
+--- !u!114 &-2943666582004238431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/fIRSTeVENET
+  m_EditorClassIdentifier: 
+  Path: event:/fIRSTeVENET
+  Guid:
+    Data1: -2070205848
+    Data2: 1148253279
+    Data3: -357644104
+    Data4: -890843757
+  Banks:
+  - {fileID: 5948507030174855630}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,15 +62,18 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -5558831449458227475}
   - {fileID: 5948507030174855630}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: -2943666582004238431}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5948507030174855630}
   StringsBanks:
   - {fileID: -5558831449458227475}
   cacheVersion: 131859
-  cacheTime: 639233590733708898
-  SerializableEventsDict: []
+  cacheTime: 639233597536227773
+  SerializableEventsDict:
+  - key: event:/fIRSTeVENET
+    index: 0
 --- !u!114 &5948507030174855630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,8 +89,8 @@ MonoBehaviour:
   Path: SummerCapstoneJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639233590733678981
+  lastModified: 639233597536207836
   FileSizes:
   - Name: Desktop
-    Value: 1074
+    Value: 1612
   Exists: 1
