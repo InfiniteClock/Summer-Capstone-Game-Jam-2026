@@ -13,9 +13,12 @@ public class SleepyMeter : MonoBehaviour
     public GameObject GameOverUISP;
     public GameObject GameOverUIHA;
 
+    public GameObject CoffeeButton;
+
 
     void Start()
     {
+
         GameOverUISP.SetActive(false);
         GameOverUIHA.SetActive(false);
         coffeeDrink = 20;
@@ -32,12 +35,6 @@ public class SleepyMeter : MonoBehaviour
         sleepybar.SetSleepy(sleepy);
         tiredTime();
 
-        if (Input.GetKeyDown("space"))
-        {
-            SetPlayerSleepy();
-            
-        }
-
         if (sleepy <= 0f) 
         {
             GameOverScreenSP();
@@ -50,7 +47,7 @@ public class SleepyMeter : MonoBehaviour
 
     }
 
-    public void SetPlayerSleepy()
+    public void DrinkCoffee()
     {
         sleepy += coffeeDrink;
 
@@ -67,11 +64,13 @@ public class SleepyMeter : MonoBehaviour
     private void GameOverScreenSP() 
     {
         GameOverUISP.SetActive(true);
+        CoffeeButton.SetActive(false);
     }
 
     private void GameOverScreenHA()
     {
         GameOverUIHA.SetActive(true);
+        CoffeeButton.SetActive(false);
     }
 
 }
