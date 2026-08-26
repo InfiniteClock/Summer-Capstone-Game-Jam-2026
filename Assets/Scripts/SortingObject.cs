@@ -36,6 +36,8 @@ public class SortingObject : MonoBehaviour
     private void OnMouseDown()
     {
         mousePosition = Input.mousePosition - GetMousePos();
+        if (GameplayManager.Instance.hand.UseHandCursor)
+            GameplayManager.Instance.hand.SetClosedHand();
     }
     private void OnMouseDrag()
     {
@@ -47,6 +49,11 @@ public class SortingObject : MonoBehaviour
         transform.position = newPos;
 
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+    }
+    private void OnMouseUp()
+    {
+        if (GameplayManager.Instance.hand.UseHandCursor)
+            GameplayManager.Instance.hand.SetOpenHand();
     }
     private void CheckForKillLayer()
     {
