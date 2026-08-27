@@ -738,6 +738,7 @@ GameObject:
   - component: {fileID: 711777798}
   - component: {fileID: 711777797}
   - component: {fileID: 711777796}
+  - component: {fileID: 711777800}
   m_Layer: 5
   m_Name: GameOverUIElementHA
   m_TagString: Untagged
@@ -851,6 +852,37 @@ RectTransform:
   m_AnchoredPosition: {x: -11.371399, y: -269}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &711777800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711777795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1572862246
+      Data2: 1190787144
+      Data3: -711660887
+      Data4: 606619571
+    Path: event:/GameOver
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &957204976
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +933,13 @@ MonoBehaviour:
       Data3: 1457816965
       Data4: -1377222887
     Path: event:/DrinkCoffee
+  gameOverSFX:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!4 &957204978
 Transform:
   m_ObjectHideFlags: 0
@@ -1515,6 +1554,7 @@ GameObject:
   - component: {fileID: 1287474657}
   - component: {fileID: 1287474656}
   - component: {fileID: 1287474655}
+  - component: {fileID: 1287474658}
   m_Layer: 5
   m_Name: GameOverUIElementSP
   m_TagString: Untagged
@@ -1598,6 +1638,37 @@ RectTransform:
   m_AnchoredPosition: {x: -11.371399, y: -68.3291}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &1287474658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287474654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1572862246
+      Data2: 1190787144
+      Data3: -711660887
+      Data4: 606619571
+    Path: event:/GameOver
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1292089156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,7 +2570,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1760552148}
   - component: {fileID: 1760552147}
-  - component: {fileID: 1760552146}
   - component: {fileID: 1760552149}
   - component: {fileID: 1760552150}
   m_Layer: 0
@@ -2509,14 +2579,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1760552146
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760552145}
-  m_Enabled: 1
 --- !u!20 &1760552147
 Camera:
   m_ObjectHideFlags: 0
@@ -2947,6 +3009,8 @@ MonoBehaviour:
   initialCForce: 1
   speedPercentIncrease: 0.1
   currentCForce: 0
+  beltSpeed: 1
+  animator: {fileID: 0}
 --- !u!1001 &1606469017138401586
 PrefabInstance:
   m_ObjectHideFlags: 0

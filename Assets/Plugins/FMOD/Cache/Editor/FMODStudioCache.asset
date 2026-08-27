@@ -96,10 +96,10 @@ MonoBehaviour:
   Path: SummerCapstoneJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639234247250997630
+  lastModified: 639234276075097852
   FileSizes:
   - Name: Desktop
-    Value: 992
+    Value: 1042
   Exists: 1
 --- !u!114 &-4587456765354993618
 MonoBehaviour:
@@ -177,13 +177,14 @@ MonoBehaviour:
   - {fileID: -6569283140847861635}
   - {fileID: -1404474104994686522}
   - {fileID: -7786557127141430295}
+  - {fileID: 2749615649551612402}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5948507030174855630}
   StringsBanks:
   - {fileID: -5558831449458227475}
   cacheVersion: 131859
-  cacheTime: 639234247250997630
+  cacheTime: 639234276075097852
   SerializableEventsDict:
   - key: event:/WrongBox
     index: 0
@@ -197,6 +198,35 @@ MonoBehaviour:
     index: 4
   - key: event:/BGMusic
     index: 5
+  - key: event:/GameOver
+    index: 6
+--- !u!114 &2749615649551612402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GameOver
+  m_EditorClassIdentifier: 
+  Path: event:/GameOver
+  Guid:
+    Data1: -1572862246
+    Data2: 1190787144
+    Data3: -711660887
+    Data4: 606619571
+  Banks:
+  - {fileID: 5948507030174855630}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5538
 --- !u!114 &5948507030174855630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,10 +242,10 @@ MonoBehaviour:
   Path: SummerCapstoneJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639234247250992501
+  lastModified: 639234276075067921
   FileSizes:
   - Name: Desktop
-    Value: 2903680
+    Value: 2962816
   Exists: 1
 --- !u!114 &8530832426605055624
 MonoBehaviour:
