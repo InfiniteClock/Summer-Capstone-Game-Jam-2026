@@ -1,8 +1,11 @@
 using UnityEngine;
+using FMODUnity;
 
 public class SortingBox : MonoBehaviour
 {
     [SerializeField] private SortingColor sortingColor;
+    [SerializeField] private EventReference positiveSound;
+    [SerializeField] private EventReference negativeSound;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -12,6 +15,7 @@ public class SortingBox : MonoBehaviour
             {
                 // Correct Sorting Container
                 Debug.Log("Correct!");
+                RuntimeManager.PlayOneShot(positiveSound, transform.position);
                 obj.isSorted = true;
                 obj.Despawn();
             }
@@ -19,6 +23,7 @@ public class SortingBox : MonoBehaviour
             {
                 // Wrong Sorting Container
                 Debug.Log("Wrong!");
+                RuntimeManager.PlayOneShot(negativeSound, transform.position);
             }
         }
     }

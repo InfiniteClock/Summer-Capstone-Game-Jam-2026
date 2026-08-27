@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class GameplayManager : MonoBehaviour
 {
     public static GameplayManager Instance;
@@ -8,7 +9,7 @@ public class GameplayManager : MonoBehaviour
 
     [field: SerializeField]
     public bool useHandCursor { get; private set; }
-    
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -23,4 +24,5 @@ public class GameplayManager : MonoBehaviour
     {
         hand.UseHandCursor = useHandCursor;
     }
+
 }
