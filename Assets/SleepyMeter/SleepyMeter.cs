@@ -16,6 +16,11 @@ public class SleepyMeter : MonoBehaviour
     public GameObject GameOverUIHA;
 
     public GameObject CoffeeButton;
+    private bool drinkingCoffee;
+    public float timeToDrink;
+    float incrementOfSleepy;
+    float SleepyBeforeCoffee;
+    public GameObject coffeeOverlay;
 
     [SerializeField] private EventReference grabMug;
     [SerializeField] private EventReference swallowCoffee;
@@ -26,8 +31,9 @@ public class SleepyMeter : MonoBehaviour
 
         GameOverUISP.SetActive(false);
         GameOverUIHA.SetActive(false);
-        coffeeDrink = 20;
+        coffeeDrink = 40;
         sleepybar.setMaxSleepy(MaxSleep);
+        drinkingCoffee = false; 
 
     }
 
@@ -37,8 +43,25 @@ public class SleepyMeter : MonoBehaviour
         //Sleepybar sets the current blue bars progress over the sleepy bar
         //tired time ticks down the players full sleepy meter over time
         //input key space increases the players sleepybar AKA drinks the coffee
+        if (drinkingCoffee)
+        {
+            coffeeOverlay.SetActive(true);
+            if (sleepy  < coffeeDrink + SleepyBeforeCoffee)
+            {
+                incrementOfSleepy = coffeeDrink / timeToDrink;
+                sleepy += incrementOfSleepy * Time.deltaTime;
+            } else
+            {
+                drinkingCoffee = false; 
+            }
+             
+        } else if (!drinkingCoffee)
+        {
+            coffeeOverlay.SetActive(false);
+            tiredTime();
+        }
         sleepybar.SetSleepy(sleepy);
-        tiredTime();
+        
 
         if (sleepy <= 0f) 
         {
@@ -55,7 +78,8 @@ public class SleepyMeter : MonoBehaviour
     public void DrinkCoffee()
     {
         RuntimeManager.PlayOneShot(grabMug, transform.position);
-        sleepy += coffeeDrink;
+        drinkingCoffee = true;
+        SleepyBeforeCoffee = sleepy;
         RuntimeManager.PlayOneShot(swallowCoffee, transform.position);
         GameplayManager.Instance.RankUp();
     }
