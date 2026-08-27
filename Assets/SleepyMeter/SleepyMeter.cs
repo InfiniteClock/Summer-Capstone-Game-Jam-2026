@@ -21,6 +21,7 @@ public class SleepyMeter : MonoBehaviour
     float incrementOfSleepy;
     float SleepyBeforeCoffee;
     public GameObject coffeeOverlay;
+    Vector3 CoffeeOverlayStartingPos;
 
     [SerializeField] private EventReference grabMug;
     [SerializeField] private EventReference swallowCoffee;
@@ -33,7 +34,8 @@ public class SleepyMeter : MonoBehaviour
         GameOverUIHA.SetActive(false);
         
         sleepybar.setMaxSleepy(MaxSleep);
-        drinkingCoffee = false; 
+        drinkingCoffee = false;
+        CoffeeOverlayStartingPos = coffeeOverlay.transform.position;
 
     }
 
@@ -50,9 +52,11 @@ public class SleepyMeter : MonoBehaviour
             {
                 incrementOfSleepy = coffeeDrink / timeToDrink;
                 sleepy += incrementOfSleepy * Time.deltaTime;
+                
             } else
             {
-                drinkingCoffee = false; 
+                drinkingCoffee = false;
+               
             }
              
         } else if (!drinkingCoffee)
@@ -80,6 +84,8 @@ public class SleepyMeter : MonoBehaviour
         RuntimeManager.PlayOneShot(grabMug, transform.position);
         drinkingCoffee = true;
         SleepyBeforeCoffee = sleepy;
+        coffeeOverlay.transform.position = CoffeeOverlayStartingPos;
+        coffeeOverlay.transform.LeanMoveLocal(new Vector3(177, 200, 0), 2).setEaseOutQuad();
         RuntimeManager.PlayOneShot(swallowCoffee, transform.position);
         GameplayManager.Instance.RankUp();
     }
