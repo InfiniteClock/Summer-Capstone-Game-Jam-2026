@@ -16,7 +16,7 @@ public class SortingBox : MonoBehaviour
                 if (!obj.isSorted)
                 {
                     // Correct Sorting Container
-                    Debug.Log("Correct!");
+                    //Debug.Log("Correct!");
                     RuntimeManager.PlayOneShot(positiveSound, transform.position);
                     obj.isSorted = true;
                     obj.Despawn();
@@ -26,7 +26,7 @@ public class SortingBox : MonoBehaviour
             else
             {
                 // Wrong Sorting Container
-                Debug.Log("Wrong!");
+                //Debug.Log("Wrong!");
                 RuntimeManager.PlayOneShot(negativeSound, transform.position);
                 GameplayManager.UpdateScore(GameplayManager.Instance.sortWrongScore, obj.transform.position);
             }

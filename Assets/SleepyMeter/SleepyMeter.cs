@@ -57,6 +57,7 @@ public class SleepyMeter : MonoBehaviour
         RuntimeManager.PlayOneShot(grabMug, transform.position);
         sleepy += coffeeDrink;
         RuntimeManager.PlayOneShot(swallowCoffee, transform.position);
+        GameplayManager.Instance.RankUp();
     }
 
     private void tiredTime()

@@ -862,9 +862,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46bd18c59a7161d4b97fed63b8371006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialCForce: 1
+  initialCForce: 2
   currentCForce: 0
-  beltSpeed: 0.65
+  beltSpeed: 1.25
   animator: {fileID: 812206230}
 --- !u!65 &1240263502
 BoxCollider:
@@ -1133,10 +1133,10 @@ MonoBehaviour:
   - {fileID: 19952871957931868, guid: a67457c7de21fcb4c95d5817de675c74, type: 3}
   - {fileID: 245108689887781759, guid: 750a7b2a2e8c09e489d9938291e7628a, type: 3}
   - {fileID: 5544673350490610563, guid: e4551f60491dcbc4d99edb011c3c88cc, type: 3}
-  initialSpawnTime: 5
+  initialSpawnTime: 4
   speedPercentDecrease: 0.1
   currentSpawnTime: 0
-  timer: 5
+  timer: 4
 --- !u!1 &1760552145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,6 +1319,7 @@ MonoBehaviour:
   conveyor: {fileID: 1240263501}
   spawner: {fileID: 1727108812}
   maxSlowTime: 5
+  slowTimeScale: 0.5
   slowTimeCurve:
     serializedVersion: 2
     m_Curve:
@@ -1343,7 +1344,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  percentRankAdjust: 0.05
+  percentRankAdjust: 0.01
 --- !u!4 &1780175759
 Transform:
   m_ObjectHideFlags: 0

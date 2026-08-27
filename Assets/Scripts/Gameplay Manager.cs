@@ -31,11 +31,13 @@ public class GameplayManager : MonoBehaviour
     [SerializeField]
     private float maxSlowTime;
     [SerializeField]
+    private float slowTimeScale;
+    [SerializeField]
     private AnimationCurve slowTimeCurve;
     [SerializeField]
     private float percentRankAdjust;
 
-
+    private float maxTimeScale = 1f;
     private Coroutine slowTimeRoutine;
     private void Awake()
     {
@@ -64,27 +66,31 @@ public class GameplayManager : MonoBehaviour
 
     public void RankUp()
     {
-        conveyor.IncreaseConveyorForce(percentRankAdjust);
-        spawner.ReduceTime(percentRankAdjust);
+        //conveyor.IncreaseConveyorForce(percentRankAdjust);
+        //spawner.ReduceTime(percentRankAdjust);
+        SlowTime();
+
         maxSlowTime -= maxSlowTime * percentRankAdjust;
+        maxTimeScale += maxTimeScale * percentRankAdjust;
     }
     public void SlowTime()
     {
         if (slowTimeRoutine != null)
             StopCoroutine(slowTimeRoutine);
 
-        slowTimeRoutine ??= StartCoroutine(UnSlowTime());
+        slowTimeRoutine = StartCoroutine(UnSlowTime());
     }
     private IEnumerator UnSlowTime()
     {
-        Time.timeScale = 0.5f;
         float timer = 0;
         while (timer < maxSlowTime)
         {
-            Time.timeScale = Mathf.Lerp(0.5f, 1.0f, timer / maxSlowTime);
+            Time.timeScale = Mathf.Lerp(slowTimeScale, maxTimeScale, timer / maxSlowTime);
+            //Debug.Log("Timescale: " + Time.timeScale);
+
             timer += Time.deltaTime;
             yield return null;
         }
-        Time.timeScale = 1.0f;
+        Time.timeScale = maxTimeScale;
     }
 }
