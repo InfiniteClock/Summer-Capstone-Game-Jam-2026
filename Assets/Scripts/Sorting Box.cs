@@ -20,6 +20,7 @@ public class SortingBox : MonoBehaviour
                     RuntimeManager.PlayOneShot(positiveSound, transform.position);
                     obj.isSorted = true;
                     obj.Despawn();
+                    GameplayManager.UpdateScore(GameplayManager.Instance.sortCorrectScore, obj.transform.position);
                 }
             }
             else
@@ -27,6 +28,7 @@ public class SortingBox : MonoBehaviour
                 // Wrong Sorting Container
                 Debug.Log("Wrong!");
                 RuntimeManager.PlayOneShot(negativeSound, transform.position);
+                GameplayManager.UpdateScore(GameplayManager.Instance.sortWrongScore, obj.transform.position);
             }
         }
     }
