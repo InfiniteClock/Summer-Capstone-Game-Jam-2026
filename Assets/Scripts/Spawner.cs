@@ -37,8 +37,8 @@ public class Spawner : MonoBehaviour
         newObj.transform.position = transform.position;
 
     }
-    public void ReduceTime()
+    public void ReduceTime(float percent)
     {
-        currentSpawnTime -= currentSpawnTime * speedPercentDecrease;
+        currentSpawnTime -= currentSpawnTime * percent;
     }
 }

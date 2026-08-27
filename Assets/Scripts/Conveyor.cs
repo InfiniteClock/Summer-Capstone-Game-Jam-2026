@@ -4,8 +4,6 @@ public class Conveyor : MonoBehaviour
 {
     [SerializeField]
     private float initialCForce;
-    [SerializeField]
-    private float speedPercentIncrease;
 
     public float currentCForce;
 
@@ -35,9 +33,9 @@ public class Conveyor : MonoBehaviour
         }
     }
 
-    public void IncreaseConveyorForce()
+    public void IncreaseConveyorForce(float percent)
     {
-        currentCForce *= 1 + speedPercentIncrease;
-        beltSpeed *= 1 + speedPercentIncrease;
+        currentCForce *= 1 + percent;
+        beltSpeed *= 1 + percent;
     }
 }
