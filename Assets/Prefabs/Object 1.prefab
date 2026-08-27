@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4949183777296062629}
   - component: {fileID: -8862025905357619305}
   - component: {fileID: -6957650676078353137}
+  - component: {fileID: -2818482049295197711}
   m_Layer: 0
   m_Name: Object 1
   m_TagString: Untagged
@@ -149,3 +150,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735f24f2567779d42a9df77ae0c85d85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <SortColor>k__BackingField: 0
+  isSorted: 0
+--- !u!114 &-2818482049295197711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5353145827611793958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -332940397
+      Data2: 1153967059
+      Data3: -1727713139
+      Data4: -494077648
+    Path: event:/DropItem
+  Event: 
+  EventPlayTrigger: 2
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using FMODUnity;
 
 public class SleepyMeter : MonoBehaviour
 {
@@ -9,13 +10,20 @@ public class SleepyMeter : MonoBehaviour
     public float coffeeDrink;
 
     [SerializeField]
+
     private SleepyMeterBarUI sleepybar;
     public GameObject GameOverUISP;
     public GameObject GameOverUIHA;
 
+    public GameObject CoffeeButton;
+
+    [SerializeField] private EventReference grabMug;
+    [SerializeField] private EventReference swallowCoffee;
+
 
     void Start()
     {
+
         GameOverUISP.SetActive(false);
         GameOverUIHA.SetActive(false);
         coffeeDrink = 20;
@@ -32,12 +40,6 @@ public class SleepyMeter : MonoBehaviour
         sleepybar.SetSleepy(sleepy);
         tiredTime();
 
-        if (Input.GetKeyDown("space"))
-        {
-            SetPlayerSleepy();
-            
-        }
-
         if (sleepy <= 0f) 
         {
             GameOverScreenSP();
@@ -50,10 +52,11 @@ public class SleepyMeter : MonoBehaviour
 
     }
 
-    public void SetPlayerSleepy()
+    public void DrinkCoffee()
     {
+        RuntimeManager.PlayOneShot(grabMug, transform.position);
         sleepy += coffeeDrink;
-
+        RuntimeManager.PlayOneShot(swallowCoffee, transform.position);
     }
 
     private void tiredTime()
@@ -67,11 +70,13 @@ public class SleepyMeter : MonoBehaviour
     private void GameOverScreenSP() 
     {
         GameOverUISP.SetActive(true);
+        CoffeeButton.SetActive(false);
     }
 
     private void GameOverScreenHA()
     {
         GameOverUIHA.SetActive(true);
+        CoffeeButton.SetActive(false);
     }
 
 }

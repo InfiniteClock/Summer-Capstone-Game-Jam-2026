@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{d35011e4-68c7-4b56-8330-f9ea30aa2444}">
+		<property name="assetPath">
+			<value>Negative.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8461678004535147</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{794eaf0f-a4e6-449e-b419-54836323ec36}</destination>
+		</relationship>
+	</object>
+</objects>
