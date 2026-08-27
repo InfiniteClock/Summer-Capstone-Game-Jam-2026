@@ -19,7 +19,6 @@ public class SleepyMeter : MonoBehaviour
 
     [SerializeField] private EventReference grabMug;
     [SerializeField] private EventReference swallowCoffee;
-    [SerializeField] private EventReference gameOverSFX;
 
 
     void Start()
@@ -43,13 +42,11 @@ public class SleepyMeter : MonoBehaviour
 
         if (sleepy <= 0f) 
         {
-            RuntimeManager.PlayOneShot(gameOverSFX, transform.position);
             GameOverScreenSP();
         }
 
         if (sleepy >= 120f)
         {
-            RuntimeManager.PlayOneShot(gameOverSFX, transform.position);
             GameOverScreenHA();
         }
 
