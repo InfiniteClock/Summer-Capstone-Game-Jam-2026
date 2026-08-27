@@ -1388,7 +1388,7 @@ MonoBehaviour:
   - {fileID: 19952871957931868, guid: a67457c7de21fcb4c95d5817de675c74, type: 3}
   - {fileID: 5353145827611793958, guid: dd1a3746eeb932b4d9bda604e25eb42d, type: 3}
   - {fileID: 5544673350490610563, guid: e4551f60491dcbc4d99edb011c3c88cc, type: 3}
-  initialSpawnTime: 4
+  initialSpawnTime: 2
   speedPercentDecrease: 0.1
   currentSpawnTime: 0
   timer: 4
@@ -1604,7 +1604,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  percentRankAdjust: 0.01
+  percentRankAdjust: 0.05
 --- !u!4 &1780175759
 Transform:
   m_ObjectHideFlags: 0
