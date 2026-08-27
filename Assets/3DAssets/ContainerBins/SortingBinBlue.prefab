@@ -118,3 +118,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortingColor: 1
+  positiveSound:
+    Guid:
+      Data1: 808548760
+      Data2: 1206021695
+      Data3: -1164450118
+      Data4: 111099212
+    Path: event:/CorrectBox
+  negativeSound:
+    Guid:
+      Data1: -775686505
+      Data2: 1207846446
+      Data3: 498426291
+      Data4: -575884691
+    Path: event:/WrongBox

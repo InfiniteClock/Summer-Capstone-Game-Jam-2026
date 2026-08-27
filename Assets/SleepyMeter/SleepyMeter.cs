@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using FMODUnity;
 
 public class SleepyMeter : MonoBehaviour
 {
@@ -9,11 +10,15 @@ public class SleepyMeter : MonoBehaviour
     public float coffeeDrink;
 
     [SerializeField]
+
     private SleepyMeterBarUI sleepybar;
     public GameObject GameOverUISP;
     public GameObject GameOverUIHA;
 
     public GameObject CoffeeButton;
+
+    [SerializeField] private EventReference grabMug;
+    [SerializeField] private EventReference swallowCoffee;
 
 
     void Start()
@@ -49,8 +54,9 @@ public class SleepyMeter : MonoBehaviour
 
     public void DrinkCoffee()
     {
+        RuntimeManager.PlayOneShot(grabMug, transform.position);
         sleepy += coffeeDrink;
-
+        RuntimeManager.PlayOneShot(swallowCoffee, transform.position);
     }
 
     private void tiredTime()
