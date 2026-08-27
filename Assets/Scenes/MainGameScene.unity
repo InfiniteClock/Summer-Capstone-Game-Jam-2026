@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fda3a98ac5d4fc4dac5040dd9a09611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sleepy: 20
+  sleepy: 100
   MaxSleep: 120
   coffeeDrink: 0
   sleepybar: {fileID: 1276356363}
