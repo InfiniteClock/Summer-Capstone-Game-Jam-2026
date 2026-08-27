@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1846
+--- !u!114 &-7786557127141430295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGMusic
+  m_EditorClassIdentifier: 
+  Path: event:/BGMusic
+  Guid:
+    Data1: -953596153
+    Data2: 1307673862
+    Data3: -326409049
+    Data4: 1695166834
+  Banks:
+  - {fileID: 5948507030174855630}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 214658
 --- !u!114 &-6569283140847861635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +96,10 @@ MonoBehaviour:
   Path: SummerCapstoneJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639233849537674329
+  lastModified: 639234026898123471
   FileSizes:
   - Name: Desktop
-    Value: 954
+    Value: 992
   Exists: 1
 --- !u!114 &-4587456765354993618
 MonoBehaviour:
@@ -149,13 +176,14 @@ MonoBehaviour:
   - {fileID: 8530832426605055624}
   - {fileID: -6569283140847861635}
   - {fileID: -1404474104994686522}
+  - {fileID: -7786557127141430295}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5948507030174855630}
   StringsBanks:
   - {fileID: -5558831449458227475}
   cacheVersion: 131859
-  cacheTime: 639233849537674329
+  cacheTime: 639234026898123471
   SerializableEventsDict:
   - key: event:/WrongBox
     index: 0
@@ -182,10 +210,10 @@ MonoBehaviour:
   Path: SummerCapstoneJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639233849537664369
+  lastModified: 639234026898090436
   FileSizes:
   - Name: Desktop
-    Value: 114720
+    Value: 2903680
   Exists: 1
 --- !u!114 &8530832426605055624
 MonoBehaviour:
