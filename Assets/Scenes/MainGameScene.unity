@@ -673,11 +673,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sleepy: 100
   MaxSleep: 120
-  coffeeDrink: 0
+  coffeeDrink: 30
   sleepybar: {fileID: 1276356363}
   GameOverUISP: {fileID: 1165150349}
   GameOverUIHA: {fileID: 1333731981}
   CoffeeButton: {fileID: 802022886}
+  timeToDrink: 1.5
+  coffeeOverlay: {fileID: 1735524475}
   grabMug:
     Guid:
       Data1: 1582604646
@@ -1390,6 +1392,11 @@ MonoBehaviour:
   speedPercentDecrease: 0.1
   currentSpawnTime: 0
   timer: 4
+--- !u!1 &1735524475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 770500962866476965, guid: f20e2b21267cd8f4d8b148c6f0bf0163, type: 3}
+  m_PrefabInstance: {fileID: 1105015273}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1760552145
 GameObject:
   m_ObjectHideFlags: 0

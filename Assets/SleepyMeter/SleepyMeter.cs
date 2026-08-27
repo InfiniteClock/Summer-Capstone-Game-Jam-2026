@@ -31,7 +31,7 @@ public class SleepyMeter : MonoBehaviour
 
         GameOverUISP.SetActive(false);
         GameOverUIHA.SetActive(false);
-        coffeeDrink = 40;
+        
         sleepybar.setMaxSleepy(MaxSleep);
         drinkingCoffee = false; 
 
