@@ -10,8 +10,8 @@ public class SortingObject : MonoBehaviour
 
     private Vector3 minBounds = new Vector3(-10f, 1.5f, -2f);
     private Vector3 maxBounds = new Vector3(10f, 6f, 7f);
-    private float timeToDie = 3f;
-    private float killYLayer = -5f;
+    private float timeToDie = 1f;
+    private float killYLayer = -1f;
 
     private Vector3 mousePosition;
     private Camera cam;

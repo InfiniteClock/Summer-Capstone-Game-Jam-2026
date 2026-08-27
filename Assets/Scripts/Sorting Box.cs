@@ -13,11 +13,14 @@ public class SortingBox : MonoBehaviour
         {
             if (obj.SortColor == sortingColor)
             {
-                // Correct Sorting Container
-                Debug.Log("Correct!");
-                RuntimeManager.PlayOneShot(positiveSound, transform.position);
-                obj.isSorted = true;
-                obj.Despawn();
+                if (!obj.isSorted)
+                {
+                    // Correct Sorting Container
+                    Debug.Log("Correct!");
+                    RuntimeManager.PlayOneShot(positiveSound, transform.position);
+                    obj.isSorted = true;
+                    obj.Despawn();
+                }
             }
             else
             {
