@@ -1007,7 +1007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnableObjs:
-  - {fileID: 5353145827611793958, guid: dd1a3746eeb932b4d9bda604e25eb42d, type: 3}
+  - {fileID: 19952871957931868, guid: a67457c7de21fcb4c95d5817de675c74, type: 3}
   - {fileID: 245108689887781759, guid: 750a7b2a2e8c09e489d9938291e7628a, type: 3}
   - {fileID: 5544673350490610563, guid: e4551f60491dcbc4d99edb011c3c88cc, type: 3}
   initialSpawnTime: 5
