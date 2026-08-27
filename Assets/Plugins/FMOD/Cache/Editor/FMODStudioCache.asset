@@ -96,7 +96,7 @@ MonoBehaviour:
   Path: SummerCapstoneJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639234242392097006
+  lastModified: 639234247250997630
   FileSizes:
   - Name: Desktop
     Value: 992
@@ -183,7 +183,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -5558831449458227475}
   cacheVersion: 131859
-  cacheTime: 639234242392097006
+  cacheTime: 639234247250997630
   SerializableEventsDict:
   - key: event:/WrongBox
     index: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
   Path: SummerCapstoneJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639234242392097006
+  lastModified: 639234247250992501
   FileSizes:
   - Name: Desktop
     Value: 2903680
