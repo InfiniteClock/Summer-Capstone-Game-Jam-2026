@@ -38,5 +38,6 @@ public class Conveyor : MonoBehaviour
     public void IncreaseConveyorForce()
     {
         currentCForce *= 1 + speedPercentIncrease;
+        beltSpeed *= 1 + speedPercentIncrease;
     }
 }
