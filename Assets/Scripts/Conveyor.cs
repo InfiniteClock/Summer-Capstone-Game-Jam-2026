@@ -9,9 +9,17 @@ public class Conveyor : MonoBehaviour
 
     public float currentCForce;
 
+    [SerializeField] private float beltSpeed = 1f;
+    [SerializeField] private Animator animator;
+
     private void Start()
     {
         currentCForce = initialCForce;
+    }
+
+    private void FixedUpdate()
+    {
+        animator.SetFloat("Belt_Speed", beltSpeed);
     }
 
     private void OnCollisionStay(Collision collision)
