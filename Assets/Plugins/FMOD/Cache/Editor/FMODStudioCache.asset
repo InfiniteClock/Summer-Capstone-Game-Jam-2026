@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8153278231324145989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/WrongBox
+  m_EditorClassIdentifier: 
+  Path: event:/WrongBox
+  Guid:
+    Data1: -775686505
+    Data2: 1207846446
+    Data3: 498426291
+    Data4: -575884691
+  Banks:
+  - {fileID: 5948507030174855630}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1846
+--- !u!114 &-6569283140847861635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GrabCoffee
+  m_EditorClassIdentifier: 
+  Path: event:/GrabCoffee
+  Guid:
+    Data1: 1582604646
+    Data2: 1207647986
+    Data3: -691907670
+    Data4: 1179405654
+  Banks:
+  - {fileID: 5948507030174855630}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 461
 --- !u!114 &-5558831449458227475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,12 +69,12 @@ MonoBehaviour:
   Path: SummerCapstoneJam/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639233597536227773
+  lastModified: 639233849537674329
   FileSizes:
   - Name: Desktop
-    Value: 772
+    Value: 954
   Exists: 1
---- !u!114 &-2943666582004238431
+--- !u!114 &-4587456765354993618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30,14 +84,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/fIRSTeVENET
+  m_Name: event:/CorrectBox
   m_EditorClassIdentifier: 
-  Path: event:/fIRSTeVENET
+  Path: event:/CorrectBox
   Guid:
-    Data1: -2070205848
-    Data2: 1148253279
-    Data3: -357644104
-    Data4: -890843757
+    Data1: 808548760
+    Data2: 1206021695
+    Data3: -1164450118
+    Data4: 111099212
   Banks:
   - {fileID: 5948507030174855630}
   IsStream: 0
@@ -46,7 +100,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1846
+--- !u!114 &-1404474104994686522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DropItem
+  m_EditorClassIdentifier: 
+  Path: event:/DropItem
+  Guid:
+    Data1: -332940397
+    Data2: 1153967059
+    Data3: -1727713139
+    Data4: -494077648
+  Banks:
+  - {fileID: 5948507030174855630}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 923
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,17 +144,29 @@ MonoBehaviour:
   - {fileID: -5558831449458227475}
   - {fileID: 5948507030174855630}
   EditorEvents:
-  - {fileID: -2943666582004238431}
+  - {fileID: -8153278231324145989}
+  - {fileID: -4587456765354993618}
+  - {fileID: 8530832426605055624}
+  - {fileID: -6569283140847861635}
+  - {fileID: -1404474104994686522}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5948507030174855630}
   StringsBanks:
   - {fileID: -5558831449458227475}
   cacheVersion: 131859
-  cacheTime: 639233597536227773
+  cacheTime: 639233849537674329
   SerializableEventsDict:
-  - key: event:/fIRSTeVENET
+  - key: event:/WrongBox
     index: 0
+  - key: event:/CorrectBox
+    index: 1
+  - key: event:/DrinkCoffee
+    index: 2
+  - key: event:/GrabCoffee
+    index: 3
+  - key: event:/DropItem
+    index: 4
 --- !u!114 &5948507030174855630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,8 +182,35 @@ MonoBehaviour:
   Path: SummerCapstoneJam/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639233597536207836
+  lastModified: 639233849537664369
   FileSizes:
   - Name: Desktop
-    Value: 1612
+    Value: 114720
   Exists: 1
+--- !u!114 &8530832426605055624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DrinkCoffee
+  m_EditorClassIdentifier: 
+  Path: event:/DrinkCoffee
+  Guid:
+    Data1: -1989831985
+    Data2: 1314773446
+    Data3: 1457816965
+    Data4: -1377222887
+  Banks:
+  - {fileID: 5948507030174855630}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
